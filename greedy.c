@@ -1,57 +1,51 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <math.h>
 
-float m, a, b, c;
-int q, d, n, p, x, y;
+float m, a, b;
+int q, d, n, p;
+
 int main(void)
 
 {
-    do
+     do
     {
-    printf("Change owed = ");
-    m = get_float();
+        printf("Change owed = ");
+        m = get_float();
     }
-while
-    (m <= 0);
+    while
+        (m <= 0);
 
 m = m * 100;
+m = (round) (m);
 
-a = m / 25;
+{printf("m = %f\n", m);}
+while (m >= 25)
+{
+    m = m - 25;
+    q++;
+}
+{printf("q = %i\n", q);}
+a = (int) (m) % 25;
 
-    if (a > 1)
-    {
-    q = (int) a;
-    }
-    else
-    {
-    (q = 0);
-    }
+while (a >= 10)
+{
+	a = a - 10;
+	d++;
+}
+{printf("d = %i\n", d);}
+b = (int) (a) % 10;
 
-x = (int) (m) % 25;
-b = x / 10;
+while (b >= 5)
+{
+	b = b - 5;
+	n++;
+}
+{printf("n = %i\n", n);}
 
-    if (b > 1)
-    {
-    d = (int) b;
-    }
-    else
-    {
-    (d = 0);
-    }
+p = (int) (b) % 5;
 
-y = x % 10;
-c = y / 5;
-
-    if (c > 1)
-    {
-    n = (int) c;
-    }
-    else
-    {
-    (c = 0);
-    }
-p = y % 5;
-
+{printf("p = %i\n", p);}
 {
     printf("Minimum number of coins used is %i\n", q + d + n + p);
 }

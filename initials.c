@@ -6,7 +6,7 @@
 int main(void)
 
 {
-    printf("Please input name : ");
+    //printf("Please input name : ");
     string name = get_string();
     if (name != NULL)
 

@@ -26,9 +26,9 @@ int main(int argc, string argv[])
         }
         if(j == 1)
             {
-                printf("Plaintext : ");
+                printf("Plaintext: ");
                 string p = get_string();
-                printf("Ciphertext : ");
+                printf("ciphertext: ");
                 for(int i = 0, a = 0, n = strlen(p); i < n; i++)
                 {
                     int b = a % strlen(k);
@@ -57,6 +57,7 @@ int main(int argc, string argv[])
             else
             {
                 printf("String not accepted.\n");
+                return 1;
             }
     }
     else

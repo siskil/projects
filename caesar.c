@@ -16,10 +16,10 @@ int main(int argc, string argv[])
     {
         int i = atoi(argv[1]);
 
-        printf("Plaintext: ");
+        printf("plaintext: ");
         string p = get_string();
 
-        printf("Ciphertext: ");
+        printf("ciphertext: ");
 
         for(int j = 0, n = strlen(p); j < n; j++)
         {
